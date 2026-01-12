@@ -7,6 +7,9 @@ import ProfileCard from "./components/ProfileCard/ProfileCard";
 import RandomDog from "./components/RandomDog/RandomDog";
 import SpaceMissionForm from "./components/SpaceMissionForm/SpaceMissionForm";
 import Tool from "./components/Tool/Tool";
+import { NationalityReveal } from "./components/NationalityReveal/NationalityReveal";
+
+
 
 function App() {
   const johnDawson = {
@@ -26,6 +29,7 @@ function App() {
       <Goodbye familyName="Khamidov" score={90} />
       <Goodbye familyName="Khamidov" />
 
+      <NationalityReveal />
       <GenderReveal />
       <RandomDog />
       <Counter />
