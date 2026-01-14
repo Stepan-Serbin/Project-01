@@ -15,7 +15,7 @@ export default function NavBar() {
         Counter
       </NavLink>
       <NavLink to={"/nationalize"} className={navLinkClass}>
-        Nationalize
+        Nationality
       </NavLink>
       <NavLink to={"/space-mission"} className={navLinkClass}>
         Space Mission
