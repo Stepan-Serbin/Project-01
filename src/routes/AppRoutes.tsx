@@ -16,7 +16,7 @@ import Profile from "../pages/Profile/Profile";
 import ProfileData from "../pages/ProfileData/ProfileData";
 import Settings from "../pages/Settings/Settings";
 import UsersPage from "../pages/UsersPage/UsersPage";
-import {ROUTES as R} from "../shared/routes";
+import { ROUTES as R } from "../shared/routes";
 import UserPage from "../pages/UserPage/UserPage";
 
 export default function AppRoutes() {
@@ -26,37 +26,22 @@ export default function AppRoutes() {
         <Route index element={<Home />} />
         <Route path={R.GENDER_REVEAL} element={<GenderReveal />} />
         <Route path={R.NATIONALITY_REVEAL} element={<NationalityReveal />} />
-        <Route path="/counter" element={<Counter />} />
-        <Route path="/space-mission" element={<SpaceMissionForm />} />
-        <Route path="/ideal-weight" element={<IdealWeightCalculator />} />
-        <Route path="/contacts" element={<Contacts />} />
+        <Route path={R.COUNTER} element={<Counter />} />
+        <Route path={R.SPACE_MISSION} element={<SpaceMissionForm />} />
+        <Route path={R.IDEAL_WEIGHT} element={<IdealWeightCalculator />} />
+        <Route path={R.CONTACTS} element={<Contacts />} />
         <Route path={R.ABOUT} element={<About />} />
-        <Route path="/profile" element={<ProfileLayout />}>
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/profile/data" element={<ProfileData />} />
-          <Route path="/profile/settings" element={<Settings />} />
+        <Route path={R.PROFILE} element={<ProfileLayout />}>
+          <Route path={R.PROFILE} element={<Profile />} />
+          <Route path={R.PROFILE_DATA} element={<ProfileData />} />
+          <Route path={R.PROFILE_SETTINGS} element={<Settings />} />
         </Route>
-        <Route path="/products/:id" element={<ProductPage />}></Route>
+        <Route path={R.PRODUCT(":id")} element={<ProductPage />}></Route>
         <Route path="/cars/:model" element={<CarPage />}></Route>
         <Route path={R.USERS} element={<UsersPage />}></Route>
         <Route path={R.USER(":id")} element={<UserPage />}></Route>
       </Route>
-      <Route path="*" element={<NotFound />} />
+      <Route path={R.NOT_FOUND} element={<NotFound />} />
     </Routes>
   );
 }
-// export const ROUTES = {
-//   HOME: "/",
-//   GENDER_REVEAL: "/gender-reveal",
-//   NATIONALIZE: "/nationalize",
-//   COUNTER: "/counter",
-//   SPACE_MISSION: "/space-mission",
-//   IDEAL_WEIGHT: "/ideal-weight",
-//   CONTACTS: "/contacts",
-//   ABOUT: "/about",
-//   PROFILE: "/profile",
-// };
-
-// PROFILE: "/profile",
-//   PROFILE_DATA: "/profile/data",
-//   PROFILE_SETTINGS: "/profile/settings",

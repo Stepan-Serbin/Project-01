@@ -9,25 +9,25 @@ const navLinkClass = ({ isActive }: { isActive: boolean }) =>
 export default function NavBar() {
   return (
     <nav className={s.container}>
-      <NavLink to={"/"} className={navLinkClass}>
+      <NavLink to={R.HOME} className={navLinkClass}>
         Home
       </NavLink>
-      <NavLink to={"/counter"} className={navLinkClass}>
+      <NavLink to={R.COUNTER} className={navLinkClass}>
         Counter
       </NavLink>
       <NavLink to={R.NATIONALITY_REVEAL} className={navLinkClass}>
         Nationality
       </NavLink>
-      <NavLink to={"/space-mission"} className={navLinkClass}>
+      <NavLink to={R.SPACE_MISSION} className={navLinkClass}>
         Space Mission
       </NavLink>
-      <NavLink to={"/contacts"} className={navLinkClass}>
+      <NavLink to={R.CONTACTS} className={navLinkClass}>
         Contacts
       </NavLink>
       <NavLink to={R.ABOUT} className={navLinkClass}>
         About
       </NavLink>
-      <NavLink to={"/profile"} className={navLinkClass}>
+      <NavLink to={R.PROFILE} className={navLinkClass}>
         Profile
       </NavLink>
       <NavLink to={R.USERS} className={navLinkClass}>
