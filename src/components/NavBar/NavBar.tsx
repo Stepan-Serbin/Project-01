@@ -33,6 +33,13 @@ export default function NavBar() {
       <NavLink to={R.USERS} className={navLinkClass}>
         Users
       </NavLink>
+      <NavLink to={R.SIGNIN} className={navLinkClass}>
+        Sign In
+      </NavLink>
+      <NavLink to={R.SIGNUP} className={navLinkClass}>
+        Sign Up Free
+      </NavLink>
+      
     </nav>
   );
 }

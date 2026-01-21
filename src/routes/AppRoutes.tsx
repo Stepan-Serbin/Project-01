@@ -18,6 +18,8 @@ import Settings from "../pages/Settings/Settings";
 import UsersPage from "../pages/UsersPage/UsersPage";
 import { ROUTES as R } from "../shared/routes";
 import UserPage from "../pages/UserPage/UserPage";
+import Signup from "../pages/Signup/Signup";
+import Signin from "../pages/Signin/Signin";
 
 export default function AppRoutes() {
   return (
@@ -36,10 +38,12 @@ export default function AppRoutes() {
           <Route path={R.PROFILE_DATA} element={<ProfileData />} />
           <Route path={R.PROFILE_SETTINGS} element={<Settings />} />
         </Route>
-        <Route path={R.PRODUCT(":id")} element={<ProductPage />}></Route>
-        <Route path="/cars/:model" element={<CarPage />}></Route>
-        <Route path={R.USERS} element={<UsersPage />}></Route>
-        <Route path={R.USER(":id")} element={<UserPage />}></Route>
+        <Route path={R.PRODUCT(":id")} element={<ProductPage />} />
+        <Route path="/cars/:model" element={<CarPage />} />
+        <Route path={R.USERS} element={<UsersPage />} />
+        <Route path={R.USER(":id")} element={<UserPage />} />
+        <Route path={R.SIGNUP} element={<Signup />} />
+        <Route path={R.SIGNIN} element={<Signin />} />
       </Route>
       <Route path={R.NOT_FOUND} element={<NotFound />} />
     </Routes>
