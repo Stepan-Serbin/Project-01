@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Counter from "../components/Counter/Counter";
 import GenderReveal from "../components/GenderReveal/GenderReveal";
 import IdealWeightCalculator from "../components/IdealWeightCalculator/IdealWeightCalculator";
-import { NationalityReveal } from "../components/NationalityReveal/NationalityReveal";
+import Nationalize from "../components/Nationalize/Nationalize";
 import SpaceMissionForm from "../components/SpaceMissionForm/SpaceMissionForm";
 import Layout from "../layouts/Layout";
 import ProfileLayout from "../layouts/ProfileLayout";
@@ -20,6 +20,8 @@ import { ROUTES as R } from "../shared/routes";
 import UserPage from "../pages/UserPage/UserPage";
 import Signup from "../pages/Signup/Signup";
 import Signin from "../pages/Signin/Signin";
+import CreateCategory from "../pages/CreateCategory/CreateCategory";
+import Parent from "../components/Family/Parent";
 
 export default function AppRoutes() {
   return (
@@ -27,7 +29,7 @@ export default function AppRoutes() {
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path={R.GENDER_REVEAL} element={<GenderReveal />} />
-        <Route path={R.NATIONALITY_REVEAL} element={<NationalityReveal />} />
+        <Route path={R.NATIONALIZE} element={<Nationalize />} />
         <Route path={R.COUNTER} element={<Counter />} />
         <Route path={R.SPACE_MISSION} element={<SpaceMissionForm />} />
         <Route path={R.IDEAL_WEIGHT} element={<IdealWeightCalculator />} />
@@ -38,13 +40,16 @@ export default function AppRoutes() {
           <Route path={R.PROFILE_DATA} element={<ProfileData />} />
           <Route path={R.PROFILE_SETTINGS} element={<Settings />} />
         </Route>
-        <Route path={R.PRODUCT(":id")} element={<ProductPage />} />
-        <Route path="/cars/:model" element={<CarPage />} />
+        <Route path={R.PRODUCT(":id")} element={<ProductPage />}></Route>
+        <Route path="/cars/:model" element={<CarPage />}></Route>
         <Route path={R.USERS} element={<UsersPage />} />
         <Route path={R.USER(":id")} element={<UserPage />} />
         <Route path={R.SIGNUP} element={<Signup />} />
         <Route path={R.SIGNIN} element={<Signin />} />
+        <Route path={R.CREATE_CATEGORY} element={<CreateCategory />} />
+        <Route path={"/parent"} element={<Parent />} />
       </Route>
+
       <Route path={R.NOT_FOUND} element={<NotFound />} />
     </Routes>
   );

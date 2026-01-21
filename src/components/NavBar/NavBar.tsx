@@ -15,8 +15,8 @@ export default function NavBar() {
       <NavLink to={R.COUNTER} className={navLinkClass}>
         Counter
       </NavLink>
-      <NavLink to={R.NATIONALITY_REVEAL} className={navLinkClass}>
-        Nationality
+      <NavLink to={R.NATIONALIZE} className={navLinkClass}>
+        Nationalize
       </NavLink>
       <NavLink to={R.SPACE_MISSION} className={navLinkClass}>
         Space Mission
@@ -33,13 +33,18 @@ export default function NavBar() {
       <NavLink to={R.USERS} className={navLinkClass}>
         Users
       </NavLink>
+
+      <NavLink to={R.CREATE_CATEGORY} className={navLinkClass}>
+        Create Category
+      </NavLink>
+
       <NavLink to={R.SIGNIN} className={navLinkClass}>
         Sign In
       </NavLink>
+
       <NavLink to={R.SIGNUP} className={navLinkClass}>
         Sign Up Free
       </NavLink>
-      
     </nav>
   );
 }

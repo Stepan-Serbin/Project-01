@@ -22,7 +22,6 @@ export default function RandomDog() {
 
   return (
     <div>
-      
       <img src={image} alt="dog" />
     </div>
   );

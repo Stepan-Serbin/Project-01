@@ -1,7 +1,7 @@
 export const ROUTES = {
   HOME: "/",
   GENDER_REVEAL: "/gender-reveal",
-  NATIONALITY_REVEAL: "/nationality-reveal",
+  NATIONALIZE: "/nationalize",
   COUNTER: "/counter",
   SPACE_MISSION: "/space-mission",
   IDEAL_WEIGHT: "/ideal-weight",
@@ -16,4 +16,5 @@ export const ROUTES = {
   USER: (id: string | number) => `/users/${id}`,
   SIGNUP: "/signup",
   SIGNIN: "/signin",
+  CREATE_CATEGORY: "/categories/add"
 } as const;

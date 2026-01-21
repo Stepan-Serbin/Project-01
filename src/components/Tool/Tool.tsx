@@ -1,10 +1,8 @@
-import style from "./Tool.module.css"
+import style from "./Tool.module.css";
 
 const Tool = () => {
   return (
-    <div className={style.importantStep}>
-      Important step for our journey
-    </div>
+    <div className={style.importantStep}>Important step for our journey</div>
   );
 };
 

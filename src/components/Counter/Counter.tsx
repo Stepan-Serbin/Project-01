@@ -2,6 +2,7 @@ import { useState } from "react";
 import Button from "../ui/Button/Button";
 import style from "./Counter.module.css";
 
+
 function Counter() {
   const [count, setCount] = useState<number>(0);
   // хук useState принимает начальное значение состояния
