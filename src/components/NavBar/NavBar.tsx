@@ -2,13 +2,16 @@ import { NavLink } from "react-router-dom";
 import s from "./NavBar.module.css";
 import clsx from "clsx";
 import { ROUTES as R } from "../../shared/routes";
+import { useCount } from "../../hooks/useCount";
 
 const navLinkClass = ({ isActive }: { isActive: boolean }) =>
   clsx(s.link, isActive && s.active);
 
 export default function NavBar() {
+  const { count } = useCount();
   return (
     <nav className={s.container}>
+      <span>{count}</span>
       <NavLink to={R.HOME} className={navLinkClass}>
         Home
       </NavLink>
